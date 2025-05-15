@@ -1,9 +1,9 @@
 
-# 📡 FrontMQTT + ESP32 IoT Dashboard
+# FrontMQTT + ESP32 IoT Dashboard
 
 Projeto integrado de IoT com ESP32, sensor DHT22 e controle de LED via protocolo MQTT. A interface foi desenvolvida em **React Native com Expo**, permitindo o monitoramento em tempo real da temperatura, umidade e o controle remoto de atuadores.
 
----
+![Demonstração do app](./assets/demo.gif)
 
 ## Funcionalidades
 
@@ -32,7 +32,7 @@ Projeto integrado de IoT com ESP32, sensor DHT22 e controle de LED via protocolo
 
 ---
 
-## 📲 Como executar o app mobile
+## Como executar o app mobile
 
 ```bash
 # 1. Clone o repositório
@@ -55,9 +55,9 @@ npx expo start
 
 ---
 
-## 🧪 Testando com HiveMQ Web Client
+## Testando com HiveMQ Web Client
 
 Acesse [HiveMQ Websocket Client](https://www.hivemq.com/demos/websocket-client/) para:
 
-- 📤 Publicar comandos manualmente
-- 📥 Visualizar mensagens JSON publicadas pelo ESP32
+- Publicar comandos manualmente
+- Visualizar mensagens JSON publicadas pelo ESP32
