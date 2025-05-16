@@ -58,8 +58,8 @@ export default function App() {
     
     // Conectar ao broker MQTT
     console.log('Iniciando conexão MQTT...');
-    const client = mqtt.connect('wss://broker.hivemq.com:8884/mqtt', mqttOptions);
-    
+//    const client = mqtt.connect('wss://broker.hivemq.com:8884/mqtt', mqttOptions);
+    const client = mqtt.connect('ws://54.157.123.32:8081', mqttOptions);
     // Eventos de conexão
     client.on('connect', () => {
       console.log('Conectado ao broker MQTT!');
@@ -127,7 +127,7 @@ export default function App() {
   const alternarLed = useCallback(() => {
     try {
       // Criar um cliente MQTT temporário (como estamos fora do useEffect)
-      const tempClient = mqtt.connect('wss://broker.hivemq.com:8884/mqtt', {
+      const tempClient = mqtt.connect('ws://54.157.123.32:8081', {
         clientId: `mqtt_temp_${Math.random().toString(16).slice(2, 10)}`,
       });
       

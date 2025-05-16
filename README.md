@@ -3,7 +3,7 @@
 
 Projeto integrado de IoT com ESP32, sensor DHT22 e controle de LED via protocolo MQTT. A interface foi desenvolvida em **React Native com Expo**, permitindo o monitoramento em tempo real da temperatura, umidade e o controle remoto de atuadores.
 
-![Demonstração do app](./assets/demo.gif)
+![Demonstração do app](assets/demo.gif)
 
 ## Funcionalidades
 
@@ -52,6 +52,12 @@ npx expo start
 ### Exemplo de broker gratuito:
 
 - `broker.hivemq.com`, porta `1883` (TCP) ou `8884` (WSS)
+
+
+### Exemplo de broker no boker privado que criei:
+
+- `ws://54.157.123.32:8081`, porta `8081` (WSS)
+
 
 ---
 
