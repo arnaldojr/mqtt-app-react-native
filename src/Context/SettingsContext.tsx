@@ -47,8 +47,9 @@ const SettingsProvider = ({ children }: PropsWithChildren) => {
     }),
     [toggleTheme, isDark]
   );
+
   return (
-    <SettingsContext.Provider value={{ isDark, toggleTheme }}>
+    <SettingsContext.Provider value={preferences}>
       <PaperProvider theme={theme}>
         <NavigationContainer theme={theme}>{children}</NavigationContainer>
       </PaperProvider>

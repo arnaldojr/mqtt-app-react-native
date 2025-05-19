@@ -1,5 +1,3 @@
-import mqtt from "mqtt";
-
 type ConnectionStatus =
   | "connecting"
   | "connected"
