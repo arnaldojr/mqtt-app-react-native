@@ -16,10 +16,9 @@ const MqttContext = createContext<MqttContextProps>({} as MqttContextProps);
 
 const MqttProvider = ({ children }: PropsWithChildren) => {
   const [options, setOptions] = useState<IClientOptions>({} as IClientOptions);
-  const [status, setStatus] = useState<ConnectionStatus>();
 
   const {
-    status: mqttStatus,
+    status,
     subscribe: mqttSubscribe,
     disconnect,
     unsubscribe: mqttUnsubscribe,
@@ -39,10 +38,6 @@ const MqttProvider = ({ children }: PropsWithChildren) => {
   const unsubscribe = (topic: string) => {
     mqttUnsubscribe(topic);
   };
-
-  useEffect(() => {
-    setStatus(mqttStatus);
-  }, [mqttStatus]);
 
   return (
     <MqttContext.Provider

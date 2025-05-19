@@ -23,7 +23,8 @@ type SensorData = {
 const Panel = () => {
   const { colors } = useTheme();
   // Estados para armazenar os dados dos sensores e atuadores
-  const { status, disconnect, subscribe, publish } = useContext(MqttContext);
+  const { status, disconnect, subscribe, publish, unsubscribe } =
+    useContext(MqttContext);
   const [sensorData, setSensorData] = useState<SensorData>();
   const [topic, setTopic] = useState<string>("");
   const [topics, setTopics] = useState<string[]>([]);
@@ -62,6 +63,7 @@ const Panel = () => {
 
   const unsubscribeTopic = (topic: string) => {
     setTopics((previous) => previous.filter((item) => item !== topic));
+    unsubscribe(topic);
   };
 
   useEffect(() => {
