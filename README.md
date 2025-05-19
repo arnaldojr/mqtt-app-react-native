@@ -1,9 +1,7 @@
 
 # FrontMQTT + ESP32 IoT Dashboard
 
-Projeto integrado de IoT com ESP32, sensor DHT22 e controle de LED via protocolo MQTT. A interface foi desenvolvida em **React Native com Expo**, permitindo o monitoramento em tempo real da temperatura, umidade e o controle remoto de atuadores.
-
-![Demonstração do app](assets/demo.gif)
+Projeto integrado de IoT com ESP32, sensor DHT22 e controle de LED via protocolo MQTT. A interface foi desenvolvida em [**Expo**](https://expo.dev/), permitindo o monitoramento em tempo real da temperatura, umidade e o controle remoto de atuadores.
 
 ## Funcionalidades
 
@@ -33,17 +31,14 @@ Projeto integrado de IoT com ESP32, sensor DHT22 e controle de LED via protocolo
 ---
 
 ## Como executar o app mobile
-
+- Instale as dependencias
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/arnaldojr/mqtt-app-react-native.git
-cd FrontMQTT
-
-# 2. Instale as dependências
 npm install
+```
 
-# 3. Inicie o app
-npx expo start
+- Inicie o app
+```bash
+npm start
 ```
 
 > Use o QR code no navegador para abrir o app no Expo Go.
@@ -52,12 +47,6 @@ npx expo start
 ### Exemplo de broker gratuito:
 
 - `broker.hivemq.com`, porta `1883` (TCP) ou `8884` (WSS)
-
-
-### Exemplo de broker no boker privado que criei:
-
-- `ws://54.157.123.32:8081`, porta `8081` (WSS)
-
 
 ---
 
